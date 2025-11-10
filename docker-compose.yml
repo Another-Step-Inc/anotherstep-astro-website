@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  astro-website:
+    build: .
+    image: ${ORG_NAME}:another-step/astro-website:latest
+    ports:
+      - "8080:80"
+    restart: unless-stopped
