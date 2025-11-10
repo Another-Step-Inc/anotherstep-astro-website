@@ -3,13 +3,13 @@
 # ------------------------------------
 FROM node:lts-alpine AS builder
 
-WORKDIR /
+WORKDIR /app
 
 COPY package.json /app/
 
 RUN npm install
 
-COPY . /
+COPY . .
 
 RUN npm run build
 
