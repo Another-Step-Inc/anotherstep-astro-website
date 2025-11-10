@@ -1,7 +1,7 @@
 ---
 const response = await fetch("https://public-api.wordpress.com/rest/v1.1/sites/249960814/posts/1");
 const data = await response.json();
-const content = data[0].content;
+const pageContent = data.content;
 ---
 
 <html lang="en">
@@ -14,8 +14,6 @@ const content = data[0].content;
   </head>
   <body>
     <h1>My Astro Site</h1>
-    <div>
-        {content}
-    </div>
+    <div set:html={pageContent}></div>
   </body>
 </html>
