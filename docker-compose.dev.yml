@@ -6,8 +6,8 @@ services:
       dockerfile: Dockerfile.dev
     image: my-astro-dev:latest
     volumes:
-      - .:/app
-      - /app/node_modules
+      - .:/
+      - /node_modules
     ports:
       - "4321:4321"
     restart: "no"
